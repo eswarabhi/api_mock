@@ -1,0 +1,71 @@
+|
+  swagger: '2.0'
+  info:
+    version: 1.0.0
+    title: apim_27
+    x-lastModified: '21 October 2019 9:39:52 pm (India Standard Time)'
+  paths:
+    /info:
+      get:
+        produces:
+          - application/json
+        responses:
+          '200':
+            description: Success response
+        parameters: []
+        operationId: getInfo
+      post:
+        produces:
+          - application/json
+        responses:
+          '200':
+            description: Success response
+        parameters:
+          - name: body
+            in: body
+            description: ''
+            schema:
+              $ref: '#/definitions/userinfo'
+        operationId: postInfo
+        consumes:
+          - application/json
+  definitions:
+    userinfo:
+      type: object
+      properties:
+        id:
+          type: object
+          properties:
+            type:
+              type: string
+              default: integer
+            default:
+              type: integer
+              default: 123456
+        Customer:
+          type: object
+          properties:
+            type:
+              type: string
+              default: string
+            default:
+              type: string
+              default: My
+        Category:
+          type: object
+          properties:
+            type:
+              type: string
+              default: string
+            default:
+              type: string
+              default: Name
+        Postal Code:
+          type: object
+          properties:
+            type:
+              type: string
+              default: string
+            default:
+              type: string
+              default: '01606'
