@@ -1,0 +1,174 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.1",
+    "title": "doc1renamedcloned",
+    "x-lastModified": "22 May 2020 7:50:51 pm (India Standard Time)",
+    "description": "desc edited asdfadsfasfadsf safasdfadsf adsfadsfdsafdsa sadfaasdfdsa asdfasf asdfadsf asdfafadsfa fasdfasdfdsafdsafafdasdfs hsadkhfksahdfkahskfaskdhfkdsahfkhdskfahkhdskfhdsa kaksdhfkjhsadfkdsahfkskhfka aksdhfkjsahfksahfdk"
+  },
+  "paths": {
+    "/resource-test": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DocReviewEditedSchema"
+            }
+          }
+        ],
+        "operationId": "getResource-test",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/param-test/{paramIdEdited}": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "authEdited",
+            "in": "query",
+            "description": "asdfadsf asdfdsafadsf asdfasdfadsf",
+            "required": true,
+            "type": "boolean",
+            "format": ""
+          },
+          {
+            "name": "paramIdEdited",
+            "in": "path",
+            "description": "adsfsafd asdfdsafs",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "1266"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Testing Body Parameter - Doc Review",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DocReviewSchema"
+              }
+            }
+          }
+        ],
+        "operationId": "postParam-test_paramId",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/form-params-test": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          },
+          "201": {
+            "description": "asdfasfas",
+            "headers": {
+              "context-type": {
+                "description": "adfdsa",
+                "type": "string",
+                "default": "JSON"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/DocReviewEditedSchema"
+            },
+            "examples": {
+              "application/json": {
+                "name": "eswar abhi",
+                "phone": 7702667243,
+                "projects": [
+                  "audit safe",
+                  "scribe",
+                  "TCI Marketplace"
+                ]
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "reviewEdited",
+            "in": "formData",
+            "description": "dsafsafddsaf",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "Tested"
+          }
+        ],
+        "operationId": "postForm-params-test",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "DocReviewSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "default": "eswar abhi"
+        },
+        "phone": {
+          "type": "integer",
+          "default": 7702667243
+        },
+        "org Info": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "default": "UX Dev"
+            },
+            "projects": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "Audit Safe"
+              }
+            }
+          }
+        }
+      }
+    },
+    "DocReviewEditedSchema": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "default": "edited"
+        }
+      }
+    }
+  }
+}
