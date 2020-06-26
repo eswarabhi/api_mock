@@ -1,0 +1,30 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: APIM_128
+  x-lastModified: '27 February 2020 3:26:01 pm (India Standard Time)'
+paths:
+  '/mocks/{mockId}':
+    get:
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success response
+      parameters:
+        - in: path
+          description: ''
+          required: true
+          type: string
+          format: ''
+          name: mockId
+      operationId: getMocks_mockId
+  /mocks:
+    get:
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success response
+      parameters: []
+      operationId: getMocks
